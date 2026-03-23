@@ -61,13 +61,362 @@
   <!-- <meta name="yandex-verification" content="..."> -->
 </head>
 <body>
-  <header>
-<img src="/img/Logo.svg" alt="Логотип" class="header__logo">
+<header class="global-nav">
+    <div class="nav-logo">
+        <img src="/img/Logo.svg" alt="Логотип">
+    </div>
+    <div class="nav-container">
+        <ul class="nav-menu">
+            <!-- Пункт Mac с атрибутом data-dropdown, указывающим на id дропдауна -->
+            <li class="nav-item" data-dropdown="item1">
+                <a class="nav-link">Регуляторы<br>и измерители</a>
+            </li>
+            <li class="nav-item" data-dropdown="item2">
+                <a class="nav-link">Измерительные<br>датчики</a>
+            </li>
+            <li class="nav-item" data-dropdown="item3">
+                <a class="nav-link">Приводная техника<br>и датчики положения</a>
+            </li>
+            <li class="nav-item" data-dropdown="item4">
+                <a class="nav-link">ПЛК, HMI,<br>ввод-вывод</a>
+            </li>
+            <li class="nav-item" data-dropdown="item5">
+                <a class="nav-link">Клапаны</a>
+            </li>
+            <li class="nav-item" data-dropdown="item6">
+                <a class="nav-link">Пневматика,<br>фитинги, вакуум</a>
+            </li>
+            <li class="nav-item" data-dropdown="item7">
+                <a class="nav-link">Шкафы и системы<br>управления</a>
+            </li>
+            <li class="nav-item" data-dropdown="item8">
+                <a class="nav-link">Электротехника</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item1" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Регуляторы и измерители</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">ON / OFF регуляторы</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Одноканальный измеритель-регулятор серии ECD100</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">ПИД-регуляторы</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">ECD110 - одноканальный ПИД-регулятор в щитовом исполнении 48x48 мм</a></li>
+                        <li><a href="#">Двухканальный измеритель регулятор ELHART ECD2 с универсальными входами</a></li>
+                        <li><a href="#">Универсальный ПИД-регулятор с креплением на DIN-рейку ELHART ECD1</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">Регуляторы для клапанов (КЗР)</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Одноканальный измеритель-регулятор ECV1 с универсальными входами</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">Многоканальные приборы, архиваторы</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">4-х канальный измеритель-регулятор с функцией архивирования ECD4</a></li>
+                        <li><a href="#">8-ми канальный измеритель-регулятор с функцией архивирования серии ECD8</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">Весо­изме­ри­те­ль­ные устройства</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Преобразователь сигналов тензодатчиков ELHART EWM-D2-RS</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">Приборы контроля уровня</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Многофункциональный регулятор уровня жидкости ELHART ELV1</a></li>
+                        <li><a href="#">Трехканальный сигнализатор уровня ELHART ELV3</a></li>
+                        <li><a href="#">Регулятор уровня воды для бассейнов ELHART серии ELV-POOL</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">Приборы управления насосами</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Многофункциональный контроллер управления насосами ELHART EPL1</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">Таймеры, реле времени</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Двухканальный цифровой таймер реального времени ELHART ETC1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item2" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Изучить Mac</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air 13"</a></li>
+                        <li><a href="#">MacBook Air 15"</a></li>
+                        <li><a href="#">Сравнить модели</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook Pro</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Pro 14"</a></li>
+                        <li><a href="#">MacBook Pro 16"</a></li>
+                        <li><a href="#">Чип M3 / M3 Pro / M3 Max</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item3" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Изучить Mac</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air 13"</a></li>
+                        <li><a href="#">MacBook Air 15"</a></li>
+                        <li><a href="#">Сравнить модели</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook Pro</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Pro 14"</a></li>
+                        <li><a href="#">MacBook Pro 16"</a></li>
+                        <li><a href="#">Чип M3 / M3 Pro / M3 Max</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item4" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Изучить Mac</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air 13"</a></li>
+                        <li><a href="#">MacBook Air 15"</a></li>
+                        <li><a href="#">Сравнить модели</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook Pro</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Pro 14"</a></li>
+                        <li><a href="#">MacBook Pro 16"</a></li>
+                        <li><a href="#">Чип M3 / M3 Pro / M3 Max</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item5" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Изучить Mac</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air 13"</a></li>
+                        <li><a href="#">MacBook Air 15"</a></li>
+                        <li><a href="#">Сравнить модели</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook Pro</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Pro 14"</a></li>
+                        <li><a href="#">MacBook Pro 16"</a></li>
+                        <li><a href="#">Чип M3 / M3 Pro / M3 Max</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item6" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Изучить Mac</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air 13"</a></li>
+                        <li><a href="#">MacBook Air 15"</a></li>
+                        <li><a href="#">Сравнить модели</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook Pro</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Pro 14"</a></li>
+                        <li><a href="#">MacBook Pro 16"</a></li>
+                        <li><a href="#">Чип M3 / M3 Pro / M3 Max</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item7" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Изучить Mac</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air 13"</a></li>
+                        <li><a href="#">MacBook Air 15"</a></li>
+                        <li><a href="#">Сравнить модели</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook Pro</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Pro 14"</a></li>
+                        <li><a href="#">MacBook Pro 16"</a></li>
+                        <li><a href="#">Чип M3 / M3 Pro / M3 Max</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Контейнеры для выпадающих меню. Каждый имеет уникальный id, соответствующий data-dropdown -->
+<div id="dropdown-item8" class="dropdown-menu">
+    <div class="dropdown-grid">
+        <div class="dropdown-column">
+            <div class="column-title">Изучить Mac</div>
+            <ul class="column-list">
+                <!-- Пункт с подменю -->
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air 13"</a></li>
+                        <li><a href="#">MacBook Air 15"</a></li>
+                        <li><a href="#">Сравнить модели</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="submenu-trigger">
+                        <a href="#" class="dropdown-link">MacBook Pro</a>
+                        <span class="submenu-arrow">›</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Pro 14"</a></li>
+                        <li><a href="#">MacBook Pro 16"</a></li>
+                        <li><a href="#">Чип M3 / M3 Pro / M3 Max</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
 
-  </header>
-  <!-- Содержимое страницы -->
-<p>Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Имеет прямо по всей деревни от всех путь текстов. Его правилами жизни предупреждал строчка языком, злых ipsum даль собрал он вершину ты деревни бросил грустный! Несколько, своих назад? Свое над большого залетают которой прямо гор предупреждал текстами взгляд? Проектах алфавит приставка использовало.</p>
-    <!-- === Основные скрипты (с отложенной загрузкой) === -->
-  <script src="/JS/script.js" defer></script>
+
+
+<script src="/JS/script.js"></script>
 </body>
 </html>
