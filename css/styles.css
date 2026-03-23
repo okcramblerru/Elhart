@@ -1,0 +1,23 @@
+/* ----- Базовые сбросы и общие стили (сохранены из оригинальной страницы) ----- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Arial, Helvetica, sans-serif;
+  src: url(/Fonts/Helvetica-Bold.woff);
+  src: url(/Fonts/Helvetica-BoldOblique.woff);
+  src: url(/Fonts/helvetica-compressed-5871d14b6903a.woff);
+  src: url(/Fonts/helvetica-light-587ebe5a59211.woff);
+  src: url(/Fonts/Helvetica-Oblique.woff);
+  src: url(/Fonts/helvetica-rounded-bold-5871d05ead8de.woff);
+  src: url(/Fonts/Helvetica.woff);
+}
+
+body {
+font-family: Helvetica, sans-serif;
+background: #FFFFFF;
+min-height: 100vh;
+}
