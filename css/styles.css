@@ -1,48 +1,72 @@
-       /* Сброс отступов у всех элементов для единообразия */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Сброс отступов у всех элементов для единообразия */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-        /* Основные стили для тела страницы */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background: #f5f5f7;   /* Светлый фон как у Apple */
-            min-height: 100vh;     /* Минимальная высота на весь экран */
-        }
+/* Основные стили для тела страницы */
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+background: #f5f5f7;   /* Светлый фон как у Apple */
+min-height: 100vh;     /* Минимальная высота на весь экран */
+}
 
-        /* Стили для шапки с навигацией */
-        .global-nav {
-            background: rgba(255, 255, 255, 0.92);   /* Полупрозрачный белый фон */
-            backdrop-filter: blur(20px);             /* Размытие фона */
-            -webkit-backdrop-filter: blur(20px);     /* Для Safari */
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Тонкая нижняя граница */
-            position: sticky;    /* Липкая шапка при скролле */
-            top: 0;
-            z-index: 100;        /* Высокий z-index, чтобы перекрывать контент */
-        }
+/* Стили для шапки с навигацией */
+.global-nav {
+height: 40px;
+background: rgba(255, 255, 255, 0.92);   /* Полупрозрачный белый фон */
+backdrop-filter: blur(20px);             /* Размытие фона */
+-webkit-backdrop-filter: blur(20px);     /* Для Safari */
+border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Тонкая нижняя граница */
+position: sticky;    /* Липкая шапка при скролле */
+top: 0;
+z-index: 100;        /* Высокий z-index, чтобы перекрывать контент */
+}
 
-        /*Контейнер для логотипа вверху*/
-        .nav-logo{
-        position: absolute;
-        left: 5%;
-        top: 25%;
-        transform: translateX(-50%); /* центрирование по горизонтали */
-        /* если нужно ещё и по вертикали, замените на translate(-50%, -50%) */
-         margin: 0; /* убираем старые margin, чтобы не мешали */
-        height: 30px;
-        width: 30px;
-        display: flex; /* если внутри логотип, то flex может быть полезен для выравнивания содержимого */
-        }
+.center{
+padding-left: calc(50% - 800px);
+padding-right: calc(50% - 800px);
+}
+
+/*Контейнер для логотипа вверху*/
+.nav-logo{
+position: absolute;
+margin: 2px 70px 0px 70px;
+z-index: 99;
+}
+
+/* Логотип */
+.logo {
+display: inline-block;
+width: 20px;
+height: 20px; 
+}
+
+.logo-svg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 2px solid transparent; 
+    border-radius: 180px;
+}
+.logo-svg:hover{
+transform: scale(1.2);
+border: 10px;
+transition: 0.6s ease;
+border: 2px solid #4d575436; 
+border-radius: 180px;
+}
+
 
         /* Контейнер для центрирования содержимого навигации */
         .nav-container {
-            display: flex;
+            display: block;
             align-items: center;
             position: relative; /* для абсолютного позиционирования логотипа */
             max-width: 100%;
             margin: 0 auto;
+            padding: 3px 100px 3px 200px;
             justify-content: center; /* меню будет по центру */
         }
 
@@ -51,7 +75,7 @@
             display: flex;
             list-style: none;   /* Убираем маркеры списка */
             margin: 0;
-            padding: 10px;
+            padding: 0px;
             gap: 30px;          /* Расстояние между пунктами */
             align-items: center
         }
@@ -68,19 +92,21 @@
             padding: 0px 0 0px;
             text-align: center;
             
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
             color: #1d1d1f;
             text-decoration: none;
             letter-spacing: -0.01em;
-            transition: color 0.3s ease;
             cursor: pointer;    /* Курсор-указатель, как у ссылки */
         }
 
-        /* Изменение цвета при наведении */
-        .nav-link:hover {
-            color: rgba(33, 94, 79, 0.6);
-        }
+/* Изменение цвета при наведении */
+.nav-link:hover {
+color: rgba(33, 94, 79, 0.6);
+transform: scale(1.05);
+transition: 0.3s ease;
+}
+
 
         /* Стили для выпадающего меню (основной контейнер) */
         .dropdown-menu {
@@ -124,11 +150,12 @@
         /* Заголовок колонки */
         .column-title {
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             color: #1d1d1f;
             margin-bottom: 12px;
             letter-spacing: -0.2px;
             text-transform: uppercase;
+            text-decoration: underline;
         }
 
         /* Список внутри колонки */
@@ -140,13 +167,13 @@
 
         /* Элемент списка */
         .column-list li {
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             position: relative; /* Для позиционирования подменю */
         }
 
         /* Ссылки внутри дропдауна */
         .dropdown-link {
-            font-size: 14px;
+            font-size: 16px;
             color: #1d1d1f;
             text-decoration: none;
             display: inline-block;
@@ -154,9 +181,11 @@
             font-weight: 400;
         }
 
-        .dropdown-link:hover {
-            color: rgba(33, 94, 79, 0.6);;
-        }
+.dropdown-link:hover {
+color: rgba(33, 94, 79, 0.6);
+transform: scale(1.05);
+transition: 0.3s ease;
+}
 
         /* Пункты, у которых есть вложенное подменю */
         .has-submenu {
@@ -181,20 +210,20 @@
             font-size: 10px;
             margin-left: 4px;
             color: #86868b;
-            transition: transform 0.2s;
+            transition: transform 0.3s;
         }
 
         /* Стили для самого подменю (выпадающего справа) */
         .submenu {
             position: absolute;
             top: -20px;
-            left: 18%;
+            left: 21%;
             margin-left: 12px;
             background: #ffffff;
             border-radius: 14px;
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-            min-width: 1050px;
-            padding: 12px 0;
+            min-width: 98%; 
+            padding: 12px 12px;
             list-style: none;
             opacity: 0;
             visibility: hidden;
