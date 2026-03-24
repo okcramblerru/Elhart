@@ -59,45 +59,44 @@ border-radius: 180px;
 }
 
 
-        /* Контейнер для центрирования содержимого навигации */
-        .nav-container {
-            display: block;
-            align-items: center;
-            position: relative; /* для абсолютного позиционирования логотипа */
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 3px 100px 3px 200px;
-            justify-content: center; /* меню будет по центру */
+ /* Контейнер для центрирования содержимого навигации */
+.nav-container {
+display: block;
+align-items: center;
+position: relative; /* для абсолютного позиционирования логотипа */
+max-width: 100%;
+margin: 0 auto;
+padding: 3px 100px 3px 200px;
+justify-content: center; /* меню будет по центру */
         }
 
-        /* Список пунктов главного меню */
-        .nav-menu {
-            display: flex;
-            list-style: none;   /* Убираем маркеры списка */
-            margin: 0;
-            padding: 0px;
-            gap: 30px;          /* Расстояние между пунктами */
-            align-items: center
+/* Список пунктов главного меню */
+.nav-menu {
+display: flex;
+list-style: none;   /* Убираем маркеры списка */
+margin: 0;
+padding: 0px;
+gap: 30px;          /* Расстояние между пунктами */
+align-items: center
         }
 
-        /* Каждый пункт меню — относительное позиционирование для дропдауна */
-        .nav-item {
-            position: relative;
-            display: flex;
+/* Каждый пункт меню — относительное позиционирование для дропдауна */
+.nav-item {
+position: relative;
+display: flex;
         }
 
-        /* Ссылка в меню (или просто текст, так как ссылка не ведёт на страницу) */
-        .nav-link {
-            display: inline-block;
-            padding: 0px 0 0px;
-            text-align: center;
-            
-            font-size: 12px;
-            font-weight: 500;
-            color: #1d1d1f;
-            text-decoration: none;
-            letter-spacing: -0.01em;
-            cursor: pointer;    /* Курсор-указатель, как у ссылки */
+/* Ссылка в меню (или просто текст, так как ссылка не ведёт на страницу) */
+.nav-link {
+display: inline-block;
+padding: 0px 0 0px;
+text-align: center;
+font-size: 12px;
+font-weight: 500;
+color: #1d1d1f;
+text-decoration: none;
+letter-spacing: -0.01em;
+cursor: pointer;    /* Курсор-указатель, как у ссылки */
         }
 
 /* Изменение цвета при наведении */
@@ -108,179 +107,130 @@ transition: 0.3s ease;
 }
 
 
-        /* Стили для выпадающего меню (основной контейнер) */
-        .dropdown-menu {
-            position: absolute;   /* Абсолютно относительно .nav-item */
-            top: 110%;           /* Прижимаем к нижнему краю родителя */
-            left: 50%;
-            transform: translateX(-50%); /* Центрируем относительно родителя */
-            background: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.25); /* Тень */
-            min-width: 99%;    /* Минимальная ширина, как у Apple */
-            padding: 28px 32px 32px;
-            opacity: 0;          /* Скрыт по умолчанию */
-            visibility: hidden;  /* Также скрыт, чтобы не занимать место */
-            transition: opacity 0.3s cubic-bezier(0.25, 0.9, 0.4, 1.1), visibility 0.3s;
-            pointer-events: none; /* Элемент не реагирует на мышь, пока невидим */
-            z-index: 200;
-            border: 1px solid rgba(0, 0, 0, 0.06);
+/* Стили для выпадающего меню (основной контейнер) */
+.dropdown-menu {
+position: absolute;   /* Абсолютно относительно .nav-item */
+top: 110%;           /* Прижимаем к нижнему краю родителя */
+left: 50%;
+height: auto;
+transform: translateX(-50%); /* Центрируем относительно родителя */
+background: #ffffff;
+border-radius: 5px;
+box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.25); /* Тень */
+min-width: 99%;    /* Минимальная ширина, как у Apple */
+padding: 28px 32px 32px;
+opacity: 0;          /* Скрыт по умолчанию */
+visibility: hidden;  /* Также скрыт, чтобы не занимать место */
+transition: opacity 0.3s cubic-bezier(0.25, 0.9, 0.4, 1.1), visibility 0.3s;
+pointer-events: none; /* Элемент не реагирует на мышь, пока невидим */
+z-index: 200;
+border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
-        /* Активное состояние дропдауна — показываем */
-        .dropdown-menu.active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto; /* Включаем реакцию на мышь */
+/* Активное состояние дропдауна — показываем */
+.dropdown-menu.active {
+opacity: 1;
+visibility: visible;
+pointer-events: auto; /* Включаем реакцию на мышь */
         }
 
-        /* Сетка внутри дропдауна (колонки) */
-        .dropdown-grid {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
+/* Сетка внутри дропдауна (колонки) */
+.dropdown-grid {
+display: flex;
+gap: 40px;
+flex-wrap: wrap;
         }
 
-        /* Каждая колонка */
-        .dropdown-column {
-            flex: 1;
-            min-width: 140px;
+/* Каждая колонка */
+.dropdown-column {
+flex: 1;
+min-width: 140px;
         }
 
-        /* Заголовок колонки */
-        .column-title {
-            font-size: 13px;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin-bottom: 12px;
-            letter-spacing: -0.2px;
-            text-transform: uppercase;
-            text-decoration: underline;
+/* Заголовок колонки */
+.column-title {
+font-size: 13px;
+font-weight: 700;
+color: rgba(29, 66, 57, 0.6);
+margin-bottom: 12px;
+letter-spacing: -0.2px;
+text-transform: uppercase;
+text-decoration: underline;
         }
 
-        /* Список внутри колонки */
-        .column-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+/* Список внутри колонки */
+.column-list {
+list-style: none;
+margin: 0;
+padding: 0;
         }
 
-        /* Элемент списка */
-        .column-list li {
-            margin-bottom: 15px;
-            position: relative; /* Для позиционирования подменю */
-        }
+
+        
 /*Кнопка dropdown*/
 .dropdown-btn{
-    display: grid;
-    align-items:left;
-    gap: 8px;
-    font-size: 14px;
-    font-family: sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: left;
-    margin: 15px;
-    padding: 5px 10px 5px;
-    margin: -2px 100px 2px -20px;
-    height: auto;
-    width: 270px;
-    background: #ffffff;
-    border: 3px solid rgba(64, 137, 119, 0.6);
-    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    box-sizing: border-box; /* чтобы padding не увеличивал общую ширину */
+    display: flex;
+    flex-direction: column;      /* располагаем элементы вертикально */
+    align-items: center;         /* центрируем по горизонтали */
+    justify-content: center;     /* центрируем по вертикали (если есть высота) */
+    gap: 12px;                   /* расстояние между иконкой и текстом */
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #6B8C7A, #4A6B5C);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    text-align: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
+/*Картинка внутри кнопки*/
+.dropdown-link__img{
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/*Текс внутри кновки*/
+.dropdown-link__p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/*Анимация кнопка*/
 .dropdown-btn:hover {
-    
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #5F7E6B, #3A5A4B);
 }
 
-        /* Ссылки внутри дропдауна */
-        .dropdown-link {
-            font-size: 16px;
-            color: #1d1d1f;
-            text-decoration: none;
-            display: inline-block;
-            transition: color 0.2s;
-            font-weight: 400;
-        }
-
-.dropdown-link:hover {
-color: rgba(33, 94, 79, 0.6);
-transform: scale(1.05);
-transition: 0.3s ease;
+/*Анимация картинки внутри кнопки*/
+.dropdown-link__img:hover {
+    transform: scale(1.2);
 }
 
-        /* Пункты, у которых есть вложенное подменю */
-        .has-submenu {
-            position: relative;
-        }
+/* Дополнительно: активное состояние (нажатие) */
+.dropdown-btn.active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        /* Контейнер для триггера (ссылка + стрелка) */
-        .submenu-trigger {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            cursor: pointer;
-        }
-
-        /* Обеспечиваем, чтобы ссылка внутри триггера была кликабельна */
-        .submenu-trigger .dropdown-link {
-            pointer-events: auto;
-        }
-
-        /* Стрелка, указывающая на наличие подменю */
-        .submenu-arrow {
-            font-size: 10px;
-            margin-left: 4px;
-            color: #86868b;
-            transition: transform 0.3s;
-        }
-
-        /* Стили для самого подменю (выпадающего справа) */
-        .submenu {
-                position: absolute;
-    top: -30px;
-    left: 21%;
-    margin-left: 12px;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-    min-width: 1000px;
-    max-height: 100px; /* ограничим высоту */
-    overflow-y: auto; /* включаем вертикальную прокрутку */
-    padding: 12px 0;
-    list-style: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease, 0.3s;
-    pointer-events: none;
-    z-index: 250;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        /*Кнопки submenu*/
-        .submenu-btm{
+/*Положение кнопок*/
+.submenu-trigger1{
     display: grid;
-    grid-template-columns: auto 4fr;
-    height: auto;
-    width: 1000px;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-family: sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: left;
-    margin: 10px;
-    padding: 8px 12px; 
-    background: #ffffff;
-    border: 3px solid rgba(33, 94, 79, 0.6);
-    border-radius: 2px; /* скругление углов (опционально) */
-    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    box-sizing: border-box;
-        }
-        
+    margin: 10px 300px 10px 30px;
+}
+
+
+
+
+
+
         /*скроллбар*/
         .submenu::-webkit-scrollbar {
     width: 6px;
@@ -297,39 +247,7 @@ transition: 0.3s ease;
     background: #a8a8a8;
 }
 
-        /* Активное подменю — видимо */
-        .submenu.active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
 
-        /* Элементы внутри подменю */
-        .submenu li {
-            margin: 0;
-            padding: 0;
-        }
-
-        .submenu a {
-            display: block;
-            padding: 8px 20px;
-            font-size: 13px;
-            color: #1d1d1f;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .img-down {
-        padding-left: 0%;
-        padding-top: -50px;
-        width: 50px;
-        
-        }
-
-        .submenu a:hover {
-            background: #f5f5f7;
-            color: rgba(33, 94, 79, 0.6);;
-        }
 
         /* Адаптивность для узких экранов */
         @media (max-width: 780px) {
