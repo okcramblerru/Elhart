@@ -66,7 +66,7 @@ align-items: center;
 position: relative; /* для абсолютного позиционирования логотипа */
 max-width: 100%;
 margin: 0 auto;
-padding: 3px 100px 3px 200px;
+padding: 0px 100px 3px 200px;
 justify-content: center; /* меню будет по центру */
         }
 
@@ -88,22 +88,39 @@ display: flex;
 
 /* Ссылка в меню (или просто текст, так как ссылка не ведёт на страницу) */
 .nav-link {
-display: inline-block;
-padding: 0px 0 0px;
-text-align: center;
-font-size: 12px;
-font-weight: 500;
-color: #1d1d1f;
-text-decoration: none;
-letter-spacing: -0.01em;
-cursor: pointer;    /* Курсор-указатель, как у ссылки */
-        }
+    display: inline-block;
+    padding: 4px 0;           /* увеличиваем область клика */
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: #1d1d1f;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
 
-/* Изменение цвета при наведении */
+/* Эффект подчёркивания при наведении */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: rgba(33, 94, 79, 0.6);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 .nav-link:hover {
-color: rgba(33, 94, 79, 0.6);
-transform: scale(1.05);
-transition: 0.3s ease;
+    color: rgba(33, 94, 79, 0.6);
+    transform: translateY(2px); /* лёгкий подъём */
 }
 
 
